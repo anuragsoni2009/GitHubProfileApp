@@ -1,0 +1,45 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    padding: 2%;
+    flex-grow: 1;
+    flex-basis: 16%;
+  
+    display: flex; /* so child elements can use flexbox stuff too! */
+  }
+  .product-card {
+    flex: 1 16%;
+  }
+  .product-image img {
+    max-width: 100%;
+  }
+  .example-card {
+    max-width: 170px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .container{
+    /* background-image: url("https://west-secord.com/wp-content/uploads/sites/3/2018/09/West-Secord-Showhome-Contest-Shopping-Background.jpg"); */
+  background-image: url("src/assets/img/backg.jpg");
+  }
+
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }

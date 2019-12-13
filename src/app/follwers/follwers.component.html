@@ -1,0 +1,58 @@
+ 
+   
+<div class="container">
+    <!-- search functionality -->
+    <!-- <br>
+    <div fxLayout fxLayoutAlign="center">
+    <form class="example-form" ngForm="#search" (ngSubmit)="Search(search)">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Search" name="search" [(ngModel)]="searchFollower">
+            </mat-form-field>
+            <button type="Submit" mat-raised-button color="primary">Click me!</button>
+          </form> -->
+<!-- search functionality ends-->
+<!-- </div> -->
+
+
+<br><br>
+        <!-- <div fxLayout fxLayoutAlign="center">
+  
+    
+                <input  placeholder="Search" name="search" > 
+              
+              
+            </div>  -->
+
+
+        <div fxLayout fxLayout="row wrap"fxLayoutGap="15px" fxLayoutAlign="center" >
+
+        <div *ngFor="let person of userList" >
+      <br>
+            
+      
+      
+            <mat-card class="example-card" >
+              <mat-card-header>
+                <!-- <div mat-card-avatar style="background-image: url('{{person.avatar_url}}');background-size: cover;"></div> -->
+                <mat-card-title>{{person.login}}</mat-card-title>
+                <mat-card-subtitle>{{person.node_id}}</mat-card-subtitle>
+              </mat-card-header>
+              <img  style="height: 180px;width: 190px;" mat-card-image src="{{person.avatar_url}}">
+              <mat-card-content>
+                <p>
+                  Want to know more?
+                </p>
+              </mat-card-content>
+              <!-- <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="userDetails(person);">More info</button>
+              </mat-card-actions> -->
+            </mat-card>
+      &nbsp;
+          </div>
+           
+      
+        </div>
+      
+      </div>
+      
+      

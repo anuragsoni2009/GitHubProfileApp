@@ -1,0 +1,24 @@
+.product-filter {
+    display: flex;
+  }
+
+  .product-filter h1 {
+    flex-grow: 1;
+  }
+
+
+  .container{
+    /* background-image: url("https://www.freewebheaders.com/wp-content/gallery/other-backgrounds/purple-lonely-footie-header-design.jpg"); */
+ /* background-color: #6b34eb; */
+ background-color:black;
+    height: 100px;
+    color:white;
+  }
+  li{
+    float:left;
+    margin-left:20px;
+    display: inline-block;
+  }
+  ul{
+    list-style-type: none;
+  }

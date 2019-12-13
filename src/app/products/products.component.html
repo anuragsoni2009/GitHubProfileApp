@@ -1,0 +1,119 @@
+<!-- <section class="products">
+
+  
+<div *ngFor="let person of userList">
+  <div class="product-card">
+    <div class="product-image">
+      <img src="{{person.avatar_url}}">
+      
+    </div>
+    <div class="product-info">
+      <h5>{{person.login}}</h5><br>
+      <h6>{{person.node_id}}</h6>
+    </div>
+  </div>
+</div>
+  
+
+</section> -->
+
+
+<div class="container">
+
+  <!-- search functionality -->
+  <br>
+  <div fxLayout fxLayoutAlign="center">
+    <form class="example-form" ngForm="#search" (ngSubmit)="Search(search)">
+      <div fxLayout fxLayoutGap="10px">
+
+        <mat-form-field style="line-height: px;" class="example-full-width">
+          <input matInput placeholder="Search" (keyup)="enableBtn()" name="search" [(ngModel)]="searchFollower">
+        </mat-form-field>
+        <button type="Submit" [disabled]="enableSearchBtn" mat-icon-button color="primary">
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+    </form>
+    <!-- search functionality ends-->
+  </div>
+  <!--added-->
+  <br>
+  <div fxLayout fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="center">
+
+    <div *ngFor="let person of foundFollower">
+      <br>
+
+
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar style="background-image: url('{{person.avatar_url}}');background-size: cover;"></div> -->
+          <mat-card-title>{{person.login}}</mat-card-title>
+          <mat-card-subtitle>{{person.node_id}}</mat-card-subtitle>
+        </mat-card-header>
+        <img style="height: 180px;width: 210px;" mat-card-image src="{{person.avatar_url}}">
+        <mat-card-content>
+          <p>
+            Want to know more?
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="userDetails(person);">More info</button>
+        </mat-card-actions>
+      </mat-card>
+      &nbsp;
+    </div>
+
+
+
+
+
+    <!--added end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div *ngFor="let person of userList">
+      <br>
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar style="background-image: url('{{person.avatar_url}}');background-size: cover;"></div> -->
+          <mat-card-title>{{person.login}}</mat-card-title>
+          <mat-card-subtitle>{{person.node_id}}</mat-card-subtitle>
+        </mat-card-header>
+        <img style="height: 180px;width: 210px;" mat-card-image src="{{person.avatar_url}}">
+        <mat-card-content>
+          <p>
+            Want to know more?
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="userDetails(person);">More info</button>
+        </mat-card-actions>
+      </mat-card>
+      &nbsp;
+    </div>
+
+
+  </div>
+
+</div>

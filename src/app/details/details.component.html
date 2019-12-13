@@ -1,0 +1,64 @@
+<div class="container">
+<div flexLayout fxLayoutAlign="center">
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <!-- <div mat-card-avatar style=" background-image: url(userdetail.avatar_url);background-size: cover;"></div> -->
+      <mat-card-title>{{userdetail.name}}</mat-card-title>
+      <mat-card-subtitle>{{userdetail.location}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{userdetail.avatar_url}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+
+
+      <table matSort (matSortChange)="sortData($event)">
+        <tr>
+          <th mat-sort-header="name">INFO </th>
+          <th mat-sort-header="calories">Detail</th>
+
+        </tr>
+
+        
+        <tr>
+          <td><mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon></td>
+          <td>{{userdetail.location}}</td>
+        </tr>
+        <tr>
+            <td>GitHub Id</td>
+            <td>{{userdetail.id}}</td>
+          </tr>
+        <tr>
+          <td>Blog</td>
+          <td>{{userdetail.blog}}</td>
+        </tr>
+
+        <tr>
+          <td>Login</td>
+          <td>{{userdetail.login}}</td>
+        </tr>
+   
+        <tr>
+            <td>Created on</td>
+            <td>{{userdetail.created_at | date}}</td>
+          </tr>
+          <tr>
+              <td>Updated at</td>
+              <td>{{userdetail.updated_at | date:'medium'}}</td>
+            </tr>
+          <tr>
+              <td>Organization URL</td>
+              <td>{{userdetail.organizations_url}}</td>
+            </tr>
+      </table>
+
+
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)='getFollowers()'>Followers</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+</div>
